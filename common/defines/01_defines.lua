@@ -96,7 +96,7 @@ NDefines.NAI.MIN_MANPOWER_TO_BUILD_UNITS = 0.9
 
 -- Base value for how much of currently used equipment the AI will at least
 -- strive to have in stock
-NDefines.NAI.PRODUCTION_EQUIPMENT_SURPLUS_FACTOR = 0.7
+NDefines.NAI.PRODUCTION_EQUIPMENT_SURPLUS_FACTOR = 0.1
 
 -- Factor for desired number of units to assign to area defense orders
 NDefines.NAI.DESIRED_UNITS_FACTOR_AREA_ORDER = 0.25
@@ -119,10 +119,10 @@ NDefines.NAI.DEPLOY_MIN_TRAINING_PEACE_FACTOR = 0.94
 NDefines.NAI.DEPLOY_MIN_TRAINING_WAR_FACTOR = 0.25
 
 -- If AI has this much manpower he doesn't care about the percentage
-NDefines.NAI.MANPOWER_FREE_USAGE_THRESHOLD = 5000
+NDefines.NAI.MANPOWER_FREE_USAGE_THRESHOLD = 500
 
 -- The AI will not deploy more units if he goes below this percentage
-NDefines.NAI.MANPOWER_RESERVED_THRESHOLD = 0.20
+NDefines.NAI.MANPOWER_RESERVED_THRESHOLD = 0.10
 
 NDefines.NAI.MAX_AVAILABLE_MANPOWER_RATIO_TO_BUFFER_WARTIME = 0.9			-- deployment will try to buffer a ratio of manpower (for reinforcements) during war time
 NDefines.NAI.MAX_AVAILABLE_MANPOWER_RATIO_TO_BUFFER_PEACETIME = 0.9		-- deployment will try to buffer a ratio of manpower (for reinforcements) during peace time

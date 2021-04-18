@@ -142,7 +142,8 @@ sporadic_outposts_occupation = {
 	}
 
 	ai_will_do = {
-		base = 1500000
+		base = 0
+		add = 1000000
 	}
 }
 
@@ -280,23 +281,7 @@ wasteland_pacification_occupation = {
 	}
 
 	ai_will_do = {
-		base = 50
-		modifier = {
-			check_variable = {
-				var = resistance
-				value = 25
-				compare = greater_than
-			}
-			add = -50
-		}
-		modifier = {
-			check_variable = {
-				var = resistance
-				value = 15
-				compare = less_than
-			}
-			add = 25
-		}
+		base = 0
 	}
 }
 
