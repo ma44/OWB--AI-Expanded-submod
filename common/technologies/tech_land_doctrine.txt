@@ -1,0 +1,2933 @@
+technologies = {
+	# Automated Warfare
+	automated_warfare = {
+
+		xor = { elite_army grand_army terror_tactics outsider_warfare_doctrine }
+
+
+		allow = {
+			Not = { has_tech = grunt_level_radio_unlock_tech }
+		}
+
+		enable_tactic = tactic_basic_steel_assault
+		enable_tactic = tactic_basic_steel_defence
+
+		path = {
+			leads_to_tech = combat_protocols
+			research_cost_coeff = 1
+		}
+
+		attrition = -0.1
+		planning_speed = 0.15
+		max_planning = 0.08
+		special_forces_cap = -0.05
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 0 y = 1 }
+		}
+
+		categories = {
+			cat_land_doctrine
+			cat_automated_warfare
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = robot_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Combat Protocols
+	combat_protocols = {
+
+		category_robots = {
+			max_organisation = 5
+		}
+
+		path = {
+			leads_to_tech = advanced_combat_protocols
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_automated_warfare
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 0 y = 3 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = robot_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Advanced Combat Protocols
+	advanced_combat_protocols = {
+
+		category_army = {
+			defense = 0.05
+			maximum_speed = 0.05
+		}
+
+		path = {
+			leads_to_tech = automated_distribution
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = field_maintenance
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_automated_warfare
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 0 y = 5 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = robot_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Automated Distribution
+	automated_distribution = {
+
+		xor={
+			field_maintenance
+		}
+
+		category_army = {
+			defense = 0.03
+		}
+
+		attrition = -0.10
+
+		path = {
+			leads_to_tech = rushed_production
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_automated_warfare
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 7 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = robot_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Rushed Production
+	rushed_production = {
+		category_robots = {
+			fuel_consumption_factor = -0.03
+		}
+
+		industrial_capacity_factory = 0.1
+
+		path = {
+			leads_to_tech = self_replicating_machinery
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_automated_warfare
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 9 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = robot_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	#Self Replicating Machinery
+	self_replicating_machinery = {
+
+		category_robots = {
+			fuel_consumption_factor = -0.03
+		}
+
+		category_army = {
+			defense = 0.03
+		}
+
+		industrial_capacity_factory = 0.1
+
+		path = {
+			leads_to_tech = combat_simulations
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_automated_warfare
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 11 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = robot_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	#Field Maintenance
+	field_maintenance = {
+
+		category_army = {
+			supply_consumption = -0.01
+			fuel_consumption = -0.03
+		}
+
+		xor = {
+			automated_distribution
+		}
+
+		path = {
+			leads_to_tech = the_flesh_is_weak
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_automated_warfare
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 7 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = robot_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	#The Flesh is Weak
+	the_flesh_is_weak = {
+
+		category_robots = {
+			breakthrough = 0.05
+			soft_attack = 0.03
+			hard_attack = 0.03
+		}
+
+		enable_tactic = tactic_overwhelming_fire
+
+		path = {
+			leads_to_tech = refined_construction
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_automated_warfare
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 9 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = robot_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	#Refined Construction
+	refined_construction = {
+
+		category_army = {
+			hardness = 0.05
+			armor_value = 0.1
+		}
+
+		path = {
+			leads_to_tech = combat_simulations
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_automated_warfare
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 11 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = robot_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	#Combat Simulations
+	combat_simulations = {
+
+		enable_tactic = tactic_planned_attack
+
+		category_army = {
+			defense = 0.05
+		}
+
+		# faster planning
+		planning_speed = 0.1
+		max_planning = 0.1
+
+		path = {
+			leads_to_tech = offensive_protocols_doctrine
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = standardised_blueprints
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_automated_warfare
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 0 y = 13 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = robot_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Offensive Protocols
+	offensive_protocols_doctrine = {
+
+		xor={
+			standardised_blueprints
+		}
+
+		category_robots = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		path = {
+			leads_to_tech = iron_fist
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_automated_warfare
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 15 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = robot_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Iron Fist
+	iron_fist = {
+
+		category_robots = {
+			soft_attack = 0.06
+			hard_attack = 0.06
+			defense = -0.05
+		}
+
+		enable_tactic = tactic_breakthrough
+
+		path = {
+			leads_to_tech = age_of_the_machine
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_automated_warfare
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 17 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = robot_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Age of the Machine
+	age_of_the_machine = {
+
+		category_robots = {
+			breakthrough = 0.05
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_automated_warfare
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 19 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = robot_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Standardised Blueprints
+	standardised_blueprints = {
+
+		xor={
+			offensive_protocols_doctrine
+		}
+
+		industrial_capacity_factory = 0.15
+
+		path = {
+			leads_to_tech = networked_ai
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_automated_warfare
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 15 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = robot_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Networked Ai
+	networked_ai = {
+
+		category_army = {
+			max_organisation = 10
+		}
+
+		industrial_capacity_factory = 0.05
+
+		path = {
+			leads_to_tech = internal_replicators
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_automated_warfare
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 17 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = robot_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Internal Replicators
+	internal_replicators = {
+
+		category_army = {
+			hardness = 0.05
+			armor_value = 0.05
+			default_morale = 0.05
+		}
+
+		category_robots = {
+			hardness = 0.05
+			armor_value = 0.05
+			default_morale = 0.05
+			supply_consumption = -0.01
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_automated_warfare
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 19 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = robot_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Elite Forces
+	elite_army = {
+
+		enable_tactic = tactic_basic_fire_and_movement
+		enable_tactic = tactic_basic_defensive_hardpoints
+
+		minimum_training_level = 0.15
+
+		allow = {
+			Not = { has_tech = grunt_level_radio_unlock_tech }
+		}
+
+		category_army = {
+			max_organisation = 3
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		xor = { automated_warfare grand_army terror_tactics outsider_warfare_doctrine }
+
+		path = {
+			leads_to_tech = concentration_of_force
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_elite_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 0 y = 1 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = elite_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Concentration of Force
+	concentration_of_force = {
+
+		conscription_factor = -0.05
+
+		category_infantry = {
+			max_organisation = 7
+			default_morale = 0.15
+		}
+
+		path = {
+			leads_to_tech = speed_of_movement
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_elite_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 0 y = 3 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = elite_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Speed of Movement
+	speed_of_movement = {
+
+		training_time_factor = 0.05
+
+		category_infantry = {
+			maximum_speed = 0.1
+			breakthrough = 0.05
+		}
+
+		path = {
+			leads_to_tech = integrated_support_doctrine
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = walking_fire
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_elite_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 0 y = 5 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = elite_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	integrated_support_doctrine = {
+
+		xor={
+			walking_fire
+		}
+
+		enable_tactic = tactic_barrage
+
+		category_combat_support = {
+			soft_attack = 0.10
+			hard_attack = 0.20
+		}
+		category_non_combat_support = {
+			max_organisation = 20
+			reliability_factor = 0.02
+		}
+
+		path = {
+			leads_to_tech = adaptive_chain_of_command
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_elite_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 7 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = elite_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Adaptive Chain of Command
+	adaptive_chain_of_command = {
+
+		land_reinforce_rate = 0.1
+
+		category_army = {
+			default_morale = 0.1
+		}
+
+		path = {
+			leads_to_tech = walking_tanks
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_elite_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 9 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = elite_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Walking Fire
+	walking_fire = {
+
+		xor = {
+			integrated_support_doctrine
+		}
+
+		org_loss_when_moving = -0.1
+		category_army = {
+			breakthrough = 0.1
+		}
+
+		path = {
+			leads_to_tech = hit_and_run
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_elite_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 7 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Hit and Run
+	hit_and_run = {
+
+		enable_tactic = tactic_overwhelming_fire
+
+		org_loss_when_moving = -0.1
+		special_forces_cap = 0.05
+		category_army = {
+			maximum_speed = 0.05
+		}
+
+		path = {
+			leads_to_tech = walking_tanks
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_elite_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 9 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Walking Tanks
+	walking_tanks = {
+
+		category_power_armour = {
+			breakthrough = 0.08
+			hard_attack = 0.08
+			soft_attack = 0.08
+		}
+		category_army = {
+			defense = 0.05
+		}
+
+		path = {
+			leads_to_tech = non_discriminatory_targeting
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = recon_in_depth
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_elite_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 0 y = 11 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = elite_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Non Discriminatory Targeting
+	non_discriminatory_targeting = {
+
+		xor = {
+			recon_in_depth
+		}
+
+		enable_tactic = tactic_backhand_blow
+
+		land_reinforce_rate = 0.1
+		conscription_factor = -0.05
+		special_forces_cap = 0.05
+		exodus_occupier_appeal = -0.1
+
+		category_army = {
+			hard_attack = 0.06
+			soft_attack = 0.06
+			defense = 0.05
+		}
+
+		path = {
+			leads_to_tech = airborne_assaults
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_elite_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 13 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Airborne Assaults
+	airborne_assaults = {
+
+		no_supply_grace = 56
+		army_bonus_air_superiority_factor = 0.20
+
+		path = {
+			leads_to_tech = scorched_earth
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_elite_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 15 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Scorched Earth
+	scorched_earth = {
+
+		land_reinforce_rate = -0.1
+		resistance_growth = -0.25
+		exodus_nomadicity = 0.25
+
+		category_army = {
+			soft_attack = 0.05
+			breakthrough = 0.05
+			defense = 0.05
+		}
+
+		path = {
+			leads_to_tech = shock_and_awe_doctrine
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			communication_engineering = 1
+			communication_engineering_1 = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_elite_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 17 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Shock and Awe
+	shock_and_awe_doctrine = {
+
+		resistance_growth = -0.25
+
+		category_army = {
+			soft_attack = 0.05
+			hard_attack = 0.10
+		}
+
+		enable_tactic = tactic_breakthrough
+
+		army_bonus_air_superiority_factor = 0.20
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_elite_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 19 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Recon in Depth
+	recon_in_depth = {
+
+		special_forces_cap = 0.05
+
+		xor = {
+			non_discriminatory_targeting
+		}
+
+		category_army = {
+			recon = 0.25
+		}
+
+		enable_tactic = tactic_infantry_charge
+
+		path = {
+			leads_to_tech = warrior_code_doctrine
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_elite_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 13 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = elite_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Warrior Code
+	warrior_code_doctrine = {
+
+		conscription_factor = -0.05
+
+		category_army = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			hardness = 0.1
+			defense = 0.05
+		}
+
+		path = {
+			leads_to_tech = combined_arms_doctrine
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_elite_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 15 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = elite_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	#Combined Arms
+	combined_arms_doctrine = {
+
+		category_infantry = {
+			max_organisation = 10
+			default_morale = 0.1
+			soft_attack = 0.05
+			hard_attack = 0.05
+			defense = 0.05
+		}
+
+		path = {
+			leads_to_tech = brigades_of_steel
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_elite_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 17 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = elite_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	#Brigades of Steel
+	brigades_of_steel = {
+
+		category_power_armour = {
+			max_organisation = 5
+			default_morale = 0.1
+			soft_attack = 0.05
+			hard_attack = 0.05
+			defense = 0.05
+		}
+
+		enable_tactic = tactic_breakthrough
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_elite_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 19 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = elite_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Prepared Defense
+	grand_army = {
+
+		xor = { automated_warfare elite_army terror_tactics outsider_warfare_doctrine }
+
+
+		allow = {
+			Not = { has_tech = grunt_level_radio_unlock_tech }
+		}
+
+		enable_tactic = tactic_basic_overwhelming_firepower_attack
+		enable_tactic = tactic_basic_overwhelming_firepower_defense
+
+		max_dig_in = 8
+		dig_in_speed_factor = 0.25
+
+		path = {
+			leads_to_tech = grand_battle_plan_owb
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_grand_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 0 y = 1 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = grand_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Grand Battle Plan
+	grand_battle_plan_owb = {
+
+		path = {
+			leads_to_tech = fortified_positions_doctrine
+			research_cost_coeff = 1
+		}
+
+		max_planning = 0.1
+		planning_speed = 0.1
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_grand_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 0 y = 3 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = grand_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Fortified Positions
+	fortified_positions_doctrine = {
+
+		category_weapon_infantry = {
+			soft_attack = 0.03
+			hard_attack = 0.03
+		}
+
+		category_leg_infantry = {
+			entrenchment = 0.3
+		}
+
+
+		path = {
+			leads_to_tech = grand_assault_doctrine
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_grand_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 0 y = 5 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = grand_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Grand Assault
+	grand_assault_doctrine = {
+
+		category_army = {
+			breakthrough = 0.10
+		}
+		terrain_penalty_reduction = 0.2
+		enable_tactic = tactic_planned_attack
+		path = {
+			leads_to_tech = mechanized_offensive_doctrine
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = hold_the_line
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_grand_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 0 y = 7 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = grand_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Mechanized Offensive
+	mechanized_offensive_doctrine = {
+
+		allow = {
+			Not = { has_tech = grunt_level_radio_unlock_tech }
+		}
+
+		xor = {
+			hold_the_line
+		}
+
+		enable_tactic = tactic_unexpected_thrust
+
+		max_dig_in = -4
+
+		category_vehicles = {
+			max_organisation = 5
+			breakthrough = 0.1
+			soft_attack = 0.05
+		}
+
+		path = {
+			leads_to_tech = assault_concentration_doctrine
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_grand_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 9 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 255
+				has_country_flag = mechanized_offensive_doctrine_ai
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Assault Concentration
+	assault_concentration_doctrine = {
+
+		category_vehicles = {
+			breakthrough = 0.1
+			hard_attack = 0.05
+			fuel_consumption_factor = -0.05
+		}
+
+		path = {
+			leads_to_tech = old_world_tactics
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_grand_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 11 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Old World Tactics
+	old_world_tactics = {
+
+		category_army = {
+			maximum_speed = 0.1
+			soft_attack = 0.05
+		}
+
+		path = {
+			leads_to_tech = old_world_thunder
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_grand_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 13 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Old World Thunder
+	old_world_thunder = {
+
+		tank = {
+			breakthrough = 0.1
+			soft_attack = 0.08
+			hard_attack = 0.16
+		}
+
+		path = {
+			leads_to_tech = old_world_lightning
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_grand_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 15 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Old World Lightning
+	old_world_lightning = {
+
+		category_army = {
+			default_morale = 0.1
+			maximum_speed = 0.05
+		}
+		land_reinforce_rate = 0.2
+
+		path = {
+			leads_to_tech = mechanized_onslaught
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_grand_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 17 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Mechanized Onslaught
+	mechanized_onslaught = {
+
+		enable_tactic = tactic_blitz
+
+		category_vehicles = {
+			max_organisation = 5
+			breakthrough = 0.08
+			hard_attack = 0.08
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_grand_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 19 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Hold the Line
+	hold_the_line = {
+
+		xor = {
+			mechanized_offensive_doctrine
+		}
+
+		enable_tactic = tactic_elastic_defense
+
+		dig_in_speed_factor = 0.25
+
+		category_leg_infantry = {
+			entrenchment = 0.3
+		}
+
+		path = {
+			leads_to_tech = concentration_of_firepower
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_grand_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 9 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = grand_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Concentration of Firepower
+	concentration_of_firepower = {
+
+		category_combat_support = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+
+		category_weapon_infantry = {
+			hard_attack = 0.05
+		}
+
+		path = {
+			leads_to_tech = grunt_level_radio_integration_doctrine_tech
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_grand_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 11 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = grand_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# New World Tactics
+	grunt_level_radio_integration_doctrine_tech = {
+
+		category_army = {
+			max_organisation = 2
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = doctrine_radio_equipment_unlock_tech_tt
+			set_technology = {
+				grunt_level_radio_unlock_tech = 1
+			}
+		}
+
+		path = {
+			leads_to_tech = hail_of_lead_doctrine_tech
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_grand_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 13 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = grand_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Send in the next Wave
+	hail_of_lead_doctrine_tech = {
+
+		category_fireteams = {
+			soft_attack = 0.05
+		}
+
+		category_demolitions = {
+			defense = 0.05
+		}
+
+		path = {
+			leads_to_tech = forward_fire_base_doctrine_tech
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_grand_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 15 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = grand_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Mass Conscription
+	forward_fire_base_doctrine_tech = {
+
+		on_research_complete = {
+			custom_effect_tooltip = forward_firebase_unlock_tech_tt
+			set_technology = {
+				forward_fire_base_unlock_tech = 1
+			}
+		}
+
+		path = {
+			leads_to_tech = rapid_weapon_redeployment_doctrine_tech
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_grand_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 17 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = grand_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Ranger Infiltration
+	rapid_weapon_redeployment_doctrine_tech = {
+
+		category_army = {
+			maximum_speed = 0.1
+		}
+
+		forward_firebase_support = {
+			maximum_speed = 0.25
+		}
+
+		dont_lose_dig_in_on_attack = 1
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_grand_army
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 19 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = grand_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Mass Assault
+	terror_tactics = {
+
+		xor = { automated_warfare elite_army grand_army outsider_warfare_doctrine }
+
+		allow = {
+			Not = { has_tech = grunt_level_radio_unlock_tech }
+		}
+
+		path = {
+			leads_to_tech = pocket_defence_doctrine
+			research_cost_coeff = 1
+		}
+		enable_tactic = tactic_basic_ambush_attack
+		enable_tactic = tactic_basic_ambush_defense
+		land_reinforce_rate = 0.1
+		minimum_training_level = -0.10
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_terror_tactics
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 0 y = 1 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = tribal_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Pocket Defense
+	pocket_defence_doctrine = {
+
+		out_of_supply_factor = -0.20
+		conscription_factor = 0.05
+
+		path = {
+			leads_to_tech = terror_tactics_actual
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_terror_tactics
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 0 y = 3 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = tribal_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Terror Tactics
+	terror_tactics_actual = {
+
+		category_army = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		path = {
+			leads_to_tech = decimato_doctrine
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tribal_wisdom_doctrine
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_terror_tactics
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 0 y = 5 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = tribal_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Decimato
+	decimato_doctrine = {
+
+		xor = {
+			tribal_wisdom_doctrine
+		}
+
+		conscription_factor = -0.1
+
+		category_army = {
+			max_organisation = 10
+		}
+
+		path = {
+			leads_to_tech = ego_gloriam_nominis
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_terror_tactics
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 7 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = terror_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+	}
+
+	# Ego Gloriam Nominis
+	ego_gloriam_nominis = {
+
+		enable_tactic = tactic_relentless_assault
+
+		category_army = {
+			breakthrough = 0.15
+		}
+
+		path = {
+			leads_to_tech = prae_timore_mortis
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_terror_tactics
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 9 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = terror_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Prae Timore Mortis
+	prae_timore_mortis = {
+
+		category_leg_infantry = {
+			soft_attack = 0.08
+			hard_attack = 0.08
+			defense = 0.04
+		}
+
+		path = {
+			leads_to_tech = exitum
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_terror_tactics
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 11 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = terror_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Exitum
+	exitum = {
+
+		resistance_growth_on_our_occupied_states = 0.3
+		special_forces_cap = 0.05
+
+		category_leg_infantry = {
+			defense = 0.1
+		}
+
+		path = {
+			leads_to_tech = invisibilia_mortem
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_terror_tactics
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 13 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = terror_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Invisibilia Mortem
+	invisibilia_mortem = {
+
+		category_army = {
+			breakthrough = 0.15
+		}
+
+		path = {
+			leads_to_tech = divide_et_vincet
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_terror_tactics
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 15 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = terror_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Divide et Vincet
+	divide_et_vincet = {
+
+		enable_tactic = tactic_delay
+
+		max_dig_in = 4
+		dig_in_speed_factor = 0.5
+
+		category_army = {
+			hard_attack = 0.05
+			soft_attack = 0.05
+		}
+
+		path = {
+			leads_to_tech = summa_bellum
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_terror_tactics
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 17 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = terror_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Summa Bellum
+	summa_bellum = {
+
+		org_loss_when_moving = -0.5
+		experience_loss_factor = -0.3
+		enable_tactic = tactic_breakthrough
+
+		category_army = {
+			max_strength = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_terror_tactics
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = -2 y = 19 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = terror_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# Tribal Wisdom
+	tribal_wisdom_doctrine = {
+
+		xor = {
+			decimato_doctrine
+		}
+
+		land_reinforce_rate = 0.1
+		attrition = -0.25
+
+		militia = {
+			defense = 0.2
+			breakthrough = 0.15
+			soft_attack = 0.15
+			hard_attack = 0.15
+		}
+
+		path = {
+			leads_to_tech = the_dog_barks
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_terror_tactics
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 7 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = tribal_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# The Dog Barks
+	the_dog_barks = {
+
+		category_militia = {
+			recon = 0.5
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		resistance_growth = -0.3
+
+		path = {
+			leads_to_tech = the_wolf_pack
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_terror_tactics
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 9 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = tribal_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# The Wolf Pack
+	the_wolf_pack = {
+		heavy_infantry = {
+			default_morale = 0.5
+			soft_attack = 0.12
+			hard_attack = 0.12
+		}
+		enable_tactic = tactic_barrage
+
+		path = {
+			leads_to_tech = the_mirelurk_pincer
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_terror_tactics
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 11 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = tribal_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# The Mirelurks Pincer
+	the_mirelurk_pincer = {
+
+		category_army = {
+			breakthrough = 0.2
+		}
+
+		path = {
+			leads_to_tech = the_nightstalkers_bite
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_terror_tactics
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 13 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = tribal_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	# The Nightstalkers Bite
+	the_nightstalkers_bite = {
+
+		out_of_supply_factor = -0.5
+		enable_tactic = tactic_guerrilla_tactics
+		resistance_growth_on_our_occupied_states = 0.40
+
+		militia = {
+			defense = 0.2
+			soft_attack = 0.15
+			hard_attack = 0.15
+		}
+
+		path = {
+			leads_to_tech = the_cazadores_speed
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_terror_tactics
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 15 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = tribal_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	the_cazadores_speed = {
+
+		category_infantry = {
+			maximum_speed = 0.1
+			soft_attack = 0.08
+		}
+
+		path = {
+			leads_to_tech = the_deathclaws_might
+			research_cost_coeff = 1
+		}
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_terror_tactics
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 17 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = tribal_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+
+	the_deathclaws_might = {
+
+		special_forces_cap = 0.05
+
+		category_militia = {
+			hard_attack = 0.1
+			soft_attack = 0.05
+		}
+		heavy_infantry = {
+			breakthrough = 0.25
+		}
+
+		command_power_gain_mult = 0.25
+		max_command_power_mult = 1
+
+		enable_tactic = tactic_backhand_blow
+
+		doctrine = yes
+		research_cost = 3
+		xp_research_type = army
+		xp_research_cost = 40
+		xp_research_bonus = 0.4
+
+		categories = {
+			cat_land_doctrine
+			cat_terror_tactics
+		}
+
+		folder = {
+			name = fallout_land_doctrine_folder
+			position = { x = 2 y = 19 }
+		}
+
+		ai_will_do = {
+			factor = 2000000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = tribal_doctrine_ai }
+			}
+		}
+
+		ai_research_weights = {
+			industry = 3.0
+		}
+
+	}
+}
