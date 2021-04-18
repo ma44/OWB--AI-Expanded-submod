@@ -5,4 +5,7 @@ tags={
 	"Alternative History"
 }
 name="Old World Blues - AI Expanded"
-supported_version="1.10.4"
+dependencies={
+	"Old World Blues"
+}
+supported_version="1.10.*"
