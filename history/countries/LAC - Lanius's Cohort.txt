@@ -1,0 +1,194 @@
+﻿capital = 5
+oob = "LAC_2275"
+set_naval_oob = "LAC_2275_naval"
+
+set_technology = {
+	infantry_tech_level_tribal = 1
+	special_forces_tech_level_tribal = 1
+	support_tech_level_tribal = 1
+	#vehicles_tech_level_tribal = 1
+	air_tech_level_tribal = 1
+	naval_tech_level_tribal = 1
+	#tools_tech_level_tribal = 1
+	#habitation_tech_level_tribal = 1
+	exploitation_tech_level_tribal = 1
+	#electronics_tech_level_tribal = 1
+	#infantry_tech_level_settler = 1
+	#special_forces_tech_level_settler = 1
+	#support_tech_level_settler = 1
+	##habitation_tech_level_settler = 1
+	#vehicles_tech_level_settler = 1
+	tribal_tech_visibility_tech = 1
+	#Just melee weapons for now
+	melee_weaponry_tech_1 = 1
+
+	#Some starting support, to reduce the amount of techs you have to research.
+	support_weaponry = 1
+	med_company_tech_1 = 1
+	dog_equipment_tech_1 = 1
+	logistics_company_tech_1 = 1
+	demolitions_weaponry_tech = 1
+	special_forces_doctrine = 1
+	spec_ops_equipment_tech_1 = 1
+	recon_company_tech_1 = 1
+	fireteam_weaponry_tech = 1
+	#Legion goes BRRRRRRRRR
+	chariot_vehicle_tech = 1
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		nautics_tech_1 = 1
+		light_navy_hull_tech_1 = 1
+		light_navy_hull_tech_2 = 1
+		waterproof_sealing_tech = 1
+		medium_navy_hull_tech_1 = 1
+		naval_invasion_tech_1 = 1
+		heavy_navy_hull_tech_1 = 1
+		naval_module_tech = 1
+		naval_armour_tech_1 = 1
+		naval_pd_module_tech_1 = 1
+		naval_communications_module_tech_1 = 1
+		naval_weapons_module_tech = 1
+		naval_support_module_tech = 1
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		nautics_tech_non_mtg_1 = 1
+		light_navy_hull_tech_non_mtg_1 = 1
+		light_navy_hull_tech_non_mtg_2 = 1
+		waterproof_sealing_tech_non_mtg = 1
+		medium_navy_hull_tech_non_mtg_1 = 1
+		naval_invasion_tech_non_mtg_1 = 1
+	}
+}
+
+set_major = yes #Temporary fix to automatic capitualation bug. Remove this once comprehensive fix
+
+set_stability = 0.075 #Very low on purpose
+set_war_support = 0.72
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = ruler
+	elections_allowed = no
+}
+
+set_popularities = {
+	people = 0
+	elites = 0
+	intellectuals = 0
+	ruler = 100
+}
+
+set_variable = { never_return_stolen_territory = 1 }
+
+set_country_flag = slavery_allowed
+set_country_flag = manpower_laws_hidden
+set_country_flag = slave_society
+set_country_flag = bans_drugs
+set_country_flag = has_unique_manpower_law
+#set_country_flag = ignore_div_limiter_before_2280
+
+#Use this doctrine, it is good for mixed infantry/vehicles ( Vehicles being chariots )
+set_country_flag = grand_doctrine_ai
+set_country_flag = mechanized_offensive_doctrine_ai
+
+add_ideas = {
+	currencycesdenarius
+	cultofmars
+	national_spirit_rejection_of_automation
+	slavers_idea_2
+	tribal_recruitment
+	undesirables_law_petty
+}
+set_convoys = 40
+
+create_country_leader = {
+	name = "Lanius"
+	desc = "LANIUS_DESC"
+	picture = "portrait_lanius.dds"
+	expire = "3000.1.1"
+	ideology = warlordship
+	id = 2771
+	traits = {
+		lac_no_mercy
+	}
+}
+
+create_corps_commander = {
+	name = "Centurion Flabius"
+	picture = "portrait_ces_generic_3.dds"
+	skill = 3
+	id = 2772
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+	traits = { strong_trait intelligent_trait ferocious_loyalty_trait }
+}
+
+create_corps_commander = {
+	name = "Centurion Nicodemus"
+	picture = "portrait_ces_generic_4.dds"
+	skill = 3
+	id = 2773
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+	traits = { strong_trait perceptive_trait ferocious_loyalty_trait }
+}
+
+add_to_tech_sharing_group = lanius_research_pact
+
+
+create_equipment_variant = {
+	name = "River Boat"
+	type = ship_hull_light_1
+	name_group = CES_LIGHT
+	parent_version = 0
+	modules = {
+		fixed_ship_command_slot = ship_command_module_1
+		fixed_ship_engine_slot = light_ship_oars_module
+		fixed_ship_engine_slot_1 = light_ship_oars_module
+		fixed_ship_battery_slot = ship_light_mounted_gun_module
+		fixed_ship_battery_slot_1 = ship_light_mounted_gun_module
+		fixed_ship_detection_slot = ship_detection_module_1
+		fixed_ship_detection_slot_1 = empty
+	}
+}
+
+create_equipment_variant = {
+	name = "Destroyer"
+	type = ship_hull_medium_1
+	name_group = CES_MEDIUM
+	parent_version = 0
+	modules = {
+		fixed_ship_command_slot = ship_command_module_1
+		fixed_ship_engine_slot = medium_ship_oars_module
+		fixed_ship_engine_slot_1 = medium_ship_oars_module
+		fixed_ship_battery_slot = ship_medium_mounted_gun_module
+		fixed_ship_battery_slot_1 = ship_medium_mounted_gun_module
+		fixed_ship_detection_slot = ship_detection_module_1
+		fixed_ship_detection_slot_1 = empty
+		fixed_ship_armour_slot = empty
+		fixed_ship_point_defense_slot = ship_light_mounted_gun_module
+		fixed_ship_point_defense_slot_1 = ship_light_mounted_gun_module
+		front_1_custom_slot = ship_medium_mounted_gun_module
+	}
+}
+
+#Cant steal this from people before SUN, so need a big stockpile
+add_equipment_to_stockpile = {
+    type = chariot_equipment
+    amount = 500
+    producer = LAC
+}

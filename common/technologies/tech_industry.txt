@@ -336,22 +336,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
 			modifier = {
-				factor = 10
-				date > "2280.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2281.1.1"
-			}
-			modifier = {
-				factor = 2
-				has_tech = tools_tech_level_settler
-			}
-			modifier = {
-				factor = 2
-				has_tech = tools_tech_level_scientific
+				factor = 2000000
+				date > "2277.1.1"
 			}
 			modifier = {
 				factor = 0
@@ -386,22 +376,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
 			modifier = {
-				factor = 10
-				date > "2281.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2282.1.1"
-			}
-			modifier = {
-				factor = 2
-				has_tech = tools_tech_level_settler
-			}
-			modifier = {
-				factor = 2
-				has_tech = tools_tech_level_scientific
+				factor = 2000000
+				date > "2277.1.1"
 			}
 			modifier = {
 				factor = 0
@@ -445,19 +425,20 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
 			modifier = {
-				factor = 10
+				factor = 2000000
 				date > "2275.1.1"
 			}
-			modifier = {
-				factor = 10
-				date > "2276.1.1"
-			}
-			modifier = {
-				factor = 0
-				has_tech = tools_tech_level_settler
-			}
+			
+			#I'm sorry devs but paying 280 base research days (not including ahead of time penalties)
+			#for +5% efficiency cap and a decision that the AI doesn't take isn't worth the opportunity cost, so settler nations will do this now
+			#modifier = {
+			#	factor = 0
+			#	has_tech = tools_tech_level_settler
+			#}
 			modifier = {
 				factor = 0
 				has_tech = tools_tech_level_scientific
@@ -500,18 +481,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
 			modifier = {
-				factor = 10
-				date > "2276.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2277.1.1"
-			}
-			modifier = {
-				factor = 0
-				has_tech = tools_tech_level_settler
+				factor = 2000000
+				date > "2275.1.1"
 			}
 			modifier = {
 				factor = 0
@@ -550,18 +525,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
 			modifier = {
-				factor = 10
-				date > "2277.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2278.1.1"
-			}
-			modifier = {
-				factor = 0
-				has_tech = tools_tech_level_settler
+				factor = 2000000
+				date > "2275.1.1"
 			}
 			modifier = {
 				factor = 0
@@ -616,7 +585,13 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
+			modifier = {
+				factor = 2000000
+				date > "2275.1.1"
+			}
 		}
 
 		ai_research_weights = {
@@ -659,13 +634,13 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = -100000
 			modifier = {
-				factor = 10
+				factor = -100000
 				date > "2275.1.1"
 			}
 			modifier = {
-				factor = 10
+				factor = -100000
 				date > "2276.1.1"
 			}
 		}
@@ -706,14 +681,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
 			modifier = {
-				factor = 10
-				date > "2276.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2277.1.1"
+				factor = 2000000
+				date > "2275.1.1"
 			}
 		}
 
@@ -757,14 +730,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
 			modifier = {
-				factor = 10
-				date > "2277.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2278.1.1"
+				factor = 2000000
+				date > "2275.1.1"
 			}
 		}
 
@@ -805,14 +776,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
 			modifier = {
-				factor = 10
-				date > "2278.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2279.1.1"
+				factor = 2000000
+				date > "2275.1.1"
 			}
 		}
 
@@ -853,14 +822,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
 			modifier = {
-				factor = 10
-				date > "2280.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2281.1.1"
+				factor = 2000000
+				date > "2277.1.1"
 			}
 		}
 
@@ -901,14 +868,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
 			modifier = {
-				factor = 10
-				date > "2281.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2282.1.1"
+				factor = 2000000
+				date > "2277.1.1"
 			}
 		}
 
@@ -944,14 +909,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
 			modifier = {
-				factor = 10
-				date > "2282.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2283.1.1"
+				factor = 2000000
+				date > "2278.1.1"
 			}
 		}
 
@@ -993,15 +956,14 @@ technologies = {
 			tribal_tech_category
 		}
 
+		#Now this, this we like
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
 			modifier = {
-				factor = 10
+				factor = 2000000
 				date > "2275.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2276.1.1"
 			}
 		}
 
@@ -1040,14 +1002,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
 			modifier = {
-				factor = 10
-				date > "2276.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2277.1.1"
+				factor = 2000000
+				date > "2275.1.1"
 			}
 		}
 
@@ -1087,14 +1047,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
 			modifier = {
-				factor = 10
-				date > "2277.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2278.1.1"
+				factor = 2000000
+				date > "2275.1.1"
 			}
 		}
 
@@ -1134,14 +1092,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
 			modifier = {
-				factor = 10
-				date > "2278.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2279.1.1"
+				factor = 2000000
+				date > "2275.1.1"
 			}
 		}
 
@@ -1181,14 +1137,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
 			modifier = {
-				factor = 10
-				date > "2280.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2281.1.1"
+				factor = 2000000
+				date > "2276.1.1"
 			}
 		}
 
@@ -1228,14 +1182,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
 			modifier = {
-				factor = 10
-				date > "2281.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2282.1.1"
+				factor = 2000000
+				date > "2277.1.1"
 			}
 		}
 
@@ -1270,14 +1222,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on something as vital as industrial output
+
 			modifier = {
-				factor = 10
-				date > "2282.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2283.1.1"
+				factor = 2000000
+				date > "2278.1.1"
 			}
 		}
 
@@ -1601,8 +1551,19 @@ technologies = {
 			tribal_tech_category
 		}
 
+
+
 		ai_will_do = {
-			factor = 10
+			modifier = {
+				factor = 300000
+				date > "2275.1.1"
+			}
+			
+			#If we don't have enough civilian factories, we can never build up a meaningful amount of a industrial base so we'll just focus on military
+			modifier = {
+				num_of_civilian_factories < 6
+				factor = -2000000
+			}
 		}
 	}
 
@@ -1641,10 +1602,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
 			modifier = {
-				factor = 50
+				factor = 300000
 				date > "2275.1.1"
+			}
+			
+			#If we don't have enough civilian factories, we can never build up a meaningful amount of a industrial base so we'll just focus on military
+			modifier = {
+				num_of_civilian_factories < 6
+				factor = -2000000
 			}
 		}
 	}
@@ -1684,10 +1650,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
 			modifier = {
-				factor = 50
-				date > "2276.1.1"
+				factor = 300000
+				date > "2275.1.1"
+			}
+			
+			#If we don't have enough civilian factories, we can never build up a meaningful amount of a industrial base so we'll just focus on military
+			modifier = {
+				num_of_civilian_factories < 6
+				factor = -2000000
 			}
 		}
 	}
@@ -1727,10 +1698,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
 			modifier = {
-				factor = 50
-				date > "2277.1.1"
+				factor = 300000
+				date > "2275.1.1"
+			}
+			
+			#If we don't have enough civilian factories, we can never build up a meaningful amount of a industrial base so we'll just focus on military
+			modifier = {
+				num_of_civilian_factories < 6
+				factor = -2000000
 			}
 		}
 	}
@@ -1771,10 +1747,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
 			modifier = {
-				factor = 50
-				date > "2280.1.1"
+				factor = 300000
+				date > "2277.1.1"
+			}
+			
+			#If we don't have enough civilian factories, we can never build up a meaningful amount of a industrial base so we'll just focus on military
+			modifier = {
+				num_of_civilian_factories < 6
+				factor = -2000000
 			}
 		}
 	}
@@ -1814,10 +1795,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
 			modifier = {
-				factor = 50
-				date > "2281.1.1"
+				factor = 300000
+				date > "2278.1.1"
+			}
+			
+			#If we don't have enough civilian factories, we can never build up a meaningful amount of a industrial base so we'll just focus on military
+			modifier = {
+				num_of_civilian_factories < 6
+				factor = -2000000
 			}
 		}
 	}
@@ -1849,10 +1835,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
 			modifier = {
-				factor = 50
-				date > "2282.1.1"
+				factor = 300000
+				date > "2279.1.1"
+			}
+			
+			#If we don't have enough civilian factories, we can never build up a meaningful amount of a industrial base so we'll just focus on military
+			modifier = {
+				num_of_civilian_factories < 6
+				factor = -2000000
 			}
 		}
 	}
@@ -2122,8 +2113,16 @@ technologies = {
 			tribal_tech_category
 		}
 
+		#Pretty godlike technology for lots of minor AI nations, rush it!
 		ai_will_do = {
-			factor = 2
+			modifier = {
+				factor = 300000
+				date > "2275.1.1"
+			}
+			modifier = {
+				factor = -2000000
+				has_manpower > 1000
+			}
 		}
 	}
 
@@ -2159,10 +2158,13 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
 			modifier = {
-				factor = 1.5
+				factor = 300000
 				date > "2275.1.1"
+			}
+			modifier = {
+				factor = -2000000
+				has_manpower > 1000
 			}
 		}
 	}
@@ -2199,10 +2201,13 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
 			modifier = {
-				factor = 1.5
-				date > "2276.1.1"
+				factor = 300000
+				date > "2275.1.1"
+			}
+			modifier = {
+				factor = -2000000
+				has_manpower > 1000
 			}
 		}
 	}
@@ -2238,10 +2243,13 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
 			modifier = {
-				factor = 1.5
-				date > "2277.1.1"
+				factor = 300000
+				date > "2275.1.1"
+			}
+			modifier = {
+				factor = -2000000
+				has_manpower > 1000
 			}
 		}
 	}
@@ -2279,10 +2287,13 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
 			modifier = {
-				factor = 1.5
-				date > "2278.1.1"
+				factor = 300000
+				date > "2275.1.1"
+			}
+			modifier = {
+				factor = -2000000
+				has_manpower > 1000
 			}
 		}
 	}
@@ -2320,10 +2331,13 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
 			modifier = {
-				factor = 1.5
-				date > "2280.1.1"
+				factor = 300000
+				date > "2275.1.1"
+			}
+			modifier = {
+				factor = -2000000
+				has_manpower > 1000
 			}
 		}
 	}
@@ -2360,10 +2374,13 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
 			modifier = {
-				factor = 1.5
-				date > "2281.1.1"
+				factor = 300000
+				date > "2275.1.1"
+			}
+			modifier = {
+				factor = -2000000
+				has_manpower > 1000
 			}
 		}
 	}
@@ -2395,10 +2412,13 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
 			modifier = {
-				factor = 1.5
-				date > "2281.1.1"
+				factor = 300000
+				date > "2275.1.1"
+			}
+			modifier = {
+				factor = -2000000
+				has_manpower > 1000
 			}
 		}
 	}

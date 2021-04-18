@@ -1,0 +1,96 @@
+###HoI4 AI Unit Production Limiter###
+### https://gitlab.com/coop-mods/Shared-Resources/tree/master/Scripts%20and%20Code/AI%20Unit%20Limiter
+###------------------------------
+###Originally made by GunnarVonPontius
+###Adapted to variables by Yard1
+###------------------------------
+###Limits the amount of divisions an AI country has to the number of factories (civ, mil, nav) it has
+###If your mod adds new unit types, make sure to add them in as well
+
+caps_division_limiter = {
+	enable = {
+		AND = {
+			if = {
+				#A thing to make the AI field more troops at the beginning years of the game, this is meant for them to act more as an obstacle against speedrunning nations
+				limit = {
+					has_country_flag = ignore_div_limiter_after_2280
+				}
+				date < 2280.1.1
+			}
+			check_variable = { caps_number_display < 300 }
+			NOT = { surrender_progress > 0.25 }
+			set_temp_variable = { temp_total_income = caps_daily_modified }
+			### Do a rough estimate of cost of mp in q
+			set_temp_variable = { temp_manpower = amount_manpower_in_deployment_queue }
+			multiply_temp_variable = { temp_manpower = temp_manpower }
+			### Rough estimation
+			divide_temp_variable = { temp_mapower = 1187.5 }
+			subtract_from_temp_variable = { temp_mapower = 5 }
+			multiply_temp_variable = {
+				temp_manpower = modifier@caps_expense_modifier
+			}
+			subtract_from_temp_variable = { temp_total_income = temp_manpower }
+			###add_to_temp_variable = { temp_total_income = modifier@caps_flat_income_modifier }
+			check_variable = {
+				temp_total_income < 0
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_army
+		id = artillery
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = -300
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = -300
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = special_mutants
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = marines
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = support_robot
+		value = -300
+	}
+	ai_strategy = {
+		type = build_army
+		id = suppression
+		value = -300
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = armor
+		value = -300
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = -300
+	}
+
+}

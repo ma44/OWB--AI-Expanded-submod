@@ -602,7 +602,13 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 4
+			#We always want to be ahead of time on something as vital as infantry equipment
+
+			modifier = {
+				factor = 300000
+				date > "2275.1.1"
+			}
 			modifier = {
 				factor = 0
 				is_researching_technology = melee_weaponry_tech_1
@@ -669,10 +675,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 4
+			#We always want to be ahead of time on something as vital as infantry equipment
+
 			modifier = {
-				factor = 10
-				date > "2279.1.1"
+				factor = 300000
+				date > "2276.1.1"
 			}
 			modifier = {
 				factor = 0
@@ -739,11 +747,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 4
+			#We always want to be ahead of time on something as vital as infantry equipment
 
 			modifier = {
-				factor = 10
-				date > "2280.1.1"
+				factor = 300000
+				date > "2276.1.1"
 			}
 		}
 	}
@@ -797,11 +806,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 4
+			#We always want to be ahead of time on something as vital as infantry equipment
 
 			modifier = {
-				factor = 10
-				date > "2281.1.1"
+				factor = 300000
+				date > "2278.1.1"
 			}
 		}
 	}
@@ -844,11 +854,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 4
+			#We always want to be ahead of time on something as vital as infantry equipment
 
 			modifier = {
-				factor = 10
-				date > "2282.1.1"
+				factor = 300000
+				date > "2278.1.1"
 			}
 		}
 	}
@@ -901,21 +912,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.8
+			factor = 4
+			#We always want to be ahead of time on something as vital as infantry equipment
 
 			modifier = {
-				factor = 2
-				date > "2282.1.9"
-			}
-
-			modifier = {
-				factor = 2
-				date > "2283.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "2284.1.6"
+				factor = 300000
+				date > "2279.1.1"
 			}
 		}
 	}
@@ -1095,11 +1097,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 4
+			#We always want to be ahead of time on something as vital as infantry equipment
+
 			modifier = {
-				factor = 10
-				date > "2277.1.1"
+				factor = 300000
+				date > "2275.1.1"
 			}
+			
+			
 			modifier = {
 				factor = 0
 				is_researching_technology = melee_weaponry_tech_2
@@ -1156,10 +1162,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 4
+			#We always want to be ahead of time on something as vital as infantry equipment
+
 			modifier = {
-				factor = 10
-				date > "2279.1.1"
+				factor = 300000
+				date > "2276.1.1"
 			}
 			modifier = {
 				factor = 0
@@ -1226,11 +1234,16 @@ technologies = {
 			civilized_tech_category
 		}
 
+		factor = 4
+		#We always want to be ahead of time on something as vital as infantry equipment
+
 		ai_will_do = {
-			factor = 3
+			factor = 4
+			#We always want to be ahead of time on something as vital as infantry equipment
+
 			modifier = {
-				factor = 10
-				date > "2281.1.1"
+				factor = 300000
+				date > "2278.1.1"
 			}
 		}
 	}
@@ -1273,10 +1286,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 4
+			#We always want to be ahead of time on something as vital as infantry equipment
+
 			modifier = {
-				factor = 10
-				date > "2280.1.1"
+				factor = 300000
+				date > "2275.1.1"
 			}
 		}
 	}
@@ -1329,21 +1344,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.8
+			factor = 4
+			#We always want to be ahead of time on something as vital as infantry equipment
 
 			modifier = {
-				factor = 2
-				date > "2282.1.9"
-			}
-
-			modifier = {
-				factor = 2
-				date > "2283.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "2284.1.6"
+				factor = 300000
+				date > "2280.1.1"
 			}
 		}
 	}
@@ -1386,21 +1392,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.8
+			factor = 4
+			#We always want to be ahead of time on something as vital as infantry equipment
 
 			modifier = {
-				factor = 2
-				date > "2284.1.9"
-			}
-
-			modifier = {
-				factor = 2
-				date > "2285.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "2286.1.6"
+				factor = 300000
+				date > "2281.1.1"
 			}
 		}
 	}
@@ -1448,21 +1445,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.8
+			factor = 4
+			#We always want to be ahead of time on something as vital as infantry equipment
 
 			modifier = {
-				factor = 2
-				date > "2286.1.9"
-			}
-
-			modifier = {
-				factor = 2
-				date > "2287.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "2288.1.6"
+				factor = 300000
+				date > "2282.1.1"
 			}
 		}
 	}
@@ -1521,10 +1509,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 4
+			#We always want to be ahead of time on something as vital as infantry equipment
+
 			modifier = {
-				factor = 10
-				tag = CES
+				factor = 300000
+				date > "2275.1.1"
 			}
 		}
 	}
@@ -1578,11 +1568,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 4
+			#We always want to be ahead of time on something as vital as infantry equipment
 
 			modifier = {
-				factor = 10
-				tag = CES
+				factor = 300000
+				date > "2275.1.1"
 			}
 			modifier = {
 				factor = 0
@@ -1655,15 +1646,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 4
+			#We always want to be ahead of time on something as vital as infantry equipment
 
 			modifier = {
-				factor = 10
-				tag = CES
-			}
-			modifier = {
-				factor = 10
-				date > "2279.1.1"
+				factor = 300000
+				date > "2278.1.1"
 			}
 		}
 	}
@@ -1704,22 +1692,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 4
+			#We always want to be ahead of time on something as vital as infantry equipment
+
 			modifier = {
-				factor = 10
-				date > "2282.1.1"
-			}
-			modifier = {
-				factor = 0
-				is_researching_technology = energy_weaponry_tech_1
-			}
-			modifier = {
-				factor = 0
-				has_country_flag = infantry_energy_ai
-			}
-			modifier = {
-				factor = 0
-				has_tech = energy_weaponry_tech_1
+				factor = 300000
+				date > "2278.1.1"
 			}
 		}
 	}
@@ -1767,15 +1745,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 4
+			#We always want to be ahead of time on something as vital as infantry equipment
 
 			modifier = {
-				factor = 10
-				tag = CES
-			}
-			modifier = {
-				factor = 10
-				date > "2279.1.1"
+				factor = 300000
+				date > "2278.1.1"
 			}
 		}
 	}
@@ -1911,7 +1886,12 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
+			#While not that big of a thing compared to infantry equipment, would be nice to have some of it
 
+			modifier = {
+				factor = 300000
+				date > "2275.1.1"
+			}
 			modifier = {
 				factor = 5
 				has_country_flag = spec_ops_doctrine_ai
@@ -2272,7 +2252,11 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
+			#overall very good tech take it
+			modifier = {
+				factor = 300000
+				date > "2278.1.1"
+			}
 			modifier = {
 				factor = 5
 				has_country_flag = spec_ops_doctrine_ai
@@ -2311,7 +2295,11 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
+			#Overall good tech still, take it!
+			modifier = {
+				factor = 300000
+				date > "2278.1.1"
+			}
 			modifier = {
 				factor = 5
 				has_country_flag = spec_ops_doctrine_ai

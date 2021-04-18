@@ -1,0 +1,197 @@
+﻿capital = 430
+oob = "IRN_2275"
+
+set_technology = {
+	infantry_tech_level_tribal = 1
+	infantry_tech_level_settler = 1
+	#infantry_tech_level_scientific = 1
+	support_tech_level_tribal = 1
+	support_tech_level_settler = 1
+	#support_tech_level_scientific = 1
+	special_forces_tech_level_tribal = 1
+	special_forces_tech_level_settler = 1
+	#special_forces_tech_level_scientific = 1
+	power_armour_tech_level_tribal = 1
+	power_armour_tech_level_settler = 1
+	#power_armour_tech_level_scientific = 1
+	#vehicles_tech_level_tribal = 1
+	#vehicles_tech_level_settler = 1
+	#vehicles_tech_level_scientific = 1
+	robotics_tech_level_tribal = 1
+	robotics_tech_level_settler = 1
+	#robotics_tech_level_scientific = 1
+	air_tech_level_tribal = 1
+	air_tech_level_settler = 1
+	#air_tech_level_scientific = 1
+	naval_tech_level_tribal = 1
+	#naval_tech_level_settler = 1
+	#naval_tech_level_scientific = 1
+	tools_tech_level_tribal = 1
+	tools_tech_level_settler = 1
+	#tools_tech_level_scientific = 1
+	habitation_tech_level_tribal = 1
+	habitation_tech_level_settler = 1
+	#habitation_tech_level_scientific = 1
+	exploitation_tech_level_tribal = 1
+	exploitation_tech_level_settler = 1
+	#exploitation_tech_level_scientific = 1
+	electronics_tech_level_tribal = 1
+	electronics_tech_level_settler = 1
+	#electronics_tech_level_scientific = 1
+	tribal_civilization = 1
+	settled_civilization = 1
+	tool_engineering = 1
+	standard_weaponry_tech = 1
+	melee_weaponry_tech_1 = 1
+	support_weaponry = 1
+	demolitions_weaponry_tech = 1
+	fireteam_weaponry_tech = 1
+	raider_reckless_aggression = 1
+	stripped_pa_tech = 1
+	weight_support_frame_pa_tech_1 = 1
+	weight_support_frame_pa_tech_2 = 1
+	wasteland_pa_tech = 1
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		nautics_tech_1 = 1
+		light_navy_hull_tech_1 = 1
+		waterproof_sealing_tech = 1
+		naval_invasion_tech_1 = 1
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		nautics_tech_non_mtg_1 = 1
+		light_navy_hull_tech_non_mtg_1 = 1
+		waterproof_sealing_tech_non_mtg = 1
+		naval_invasion_tech_non_mtg_1 = 1
+	}
+}
+
+set_stability = 0.2
+set_war_support = 0.55
+set_convoys = 20
+set_research_slots = 3
+set_country_flag = is_raider_nation
+
+set_politics = {
+	ruling_party = ruler
+	elections_allowed = no
+}
+
+set_popularities = {
+	people = 0
+	elites = 0
+	intellectuals = 0
+	ruler = 100
+}
+
+set_country_flag = slavery_allowed
+set_country_flag = extra_power_armour_flag_ai
+set_country_flag = power_armor_doctrine_ai
+set_country_flag = elite_doctrine_ai
+#set_country_flag = ignore_div_limiter_before_2280
+
+add_ideas = {
+	irn_mercenaries
+	irn_ironknights
+	slavers_idea_2
+	petty_gang_conscription
+	undesirables_law_raider
+	tot_economic_mobilisation #They have trouble getting factories to field more then 1 div of PA without this. Nerf when we give IRN real expansion targets
+}
+
+create_country_leader = {
+	name = "Bulleteater"
+	desc = "Bulleteater_DESC"
+	picture = "portrait_irn_leader.dds"
+	expire = "3000.1.1"
+	ideology = warlordship
+
+	traits = {
+		cruel_tyrant
+		warmonger
+	}
+}
+
+create_country_leader  = {
+	name = "Bulleteater"
+	desc = "Bulleteater_DESC"
+	picture = "portrait_irn_leader.dds"
+	expire = "3000.1.1"
+	ideology = technocracy
+
+	traits = {
+		cruel_tyrant
+		warmonger
+	}
+}
+create_country_leader  = {
+	name = "Bulleteater"
+	desc = "Bulleteater_DESC"
+	picture = "portrait_irn_leader.dds"
+	expire = "3000.1.1"
+	ideology = peoples_militia
+
+	traits = {
+		cruel_tyrant
+		warmonger
+	}
+}
+create_country_leader  = {
+	name = "Bulleteater"
+	desc = "Bulleteater_DESC"
+	picture = "portrait_irn_leader.dds"
+	expire = "3000.1.1"
+	ideology = feudalism
+
+	traits = {
+		cruel_tyrant
+		warmonger
+	}
+}
+create_corps_commander = {
+	name = "Bulleteater"
+	picture = "portrait_irn_leader.dds"
+	skill = 3
+	id = 100040
+	traits = {
+		hill_fighter
+		strong_trait
+		lucky_trait
+	}
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 500
+    producer = IRN
+}
+
+add_equipment_to_stockpile = {
+    type = power_armor_equipment
+    amount = 500
+    producer = IRN
+}
+add_equipment_to_stockpile = {
+    type = fireteam_equipment
+    amount = 200
+    producer = IRN
+}
+add_equipment_to_stockpile = {
+    type = demolitions_equipment
+    amount = 200
+    producer = IRN
+}

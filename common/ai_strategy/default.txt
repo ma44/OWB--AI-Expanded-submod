@@ -487,7 +487,7 @@ build_intelligence_agency = {
 	enable = {
 		date > 1940.1.1
 		has_war = no
-		num_of_civilian_factories > 25
+		num_of_civilian_factories > 1
 	}
 	abort = {
 		OR = {
@@ -498,7 +498,7 @@ build_intelligence_agency = {
 
 	ai_strategy = {
 		type = intelligence_agency_usable_factories
-		value = 5
+		value = 500
 	}
 
 }
@@ -506,17 +506,17 @@ build_intelligence_agency = {
 upgrade_intelligence_agency = {
 	enable = {
 		date > 1940.1.1
-		num_of_civilian_factories > 50
+		num_of_civilian_factories > 1
 	}
 	abort = {
 		OR = {
-			num_of_civilian_factories < 40
+			num_of_civilian_factories < 1
 		}
 	}
 
 	ai_strategy = {
 		type = intelligence_agency_usable_factories
-		value = 5
+		value = 500
 	}
 }
 
@@ -525,12 +525,12 @@ upgrade_intelligence_agency_as_spy_master = {
 		is_spymaster = yes
 		OR = {
 			has_war = no
-			num_of_civilian_factories > 50
+			num_of_civilian_factories > 1
 		}
 	}
 	abort = {
 		is_spymaster = no
-		num_of_civilian_factories < 40
+		num_of_civilian_factories < 1
 	}
 
 	ai_strategy = {

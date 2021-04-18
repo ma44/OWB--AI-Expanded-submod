@@ -80,11 +80,13 @@ special_forces_templates = {
 			match_value = 5000
 
 			support = {
-				medical_chem_company = 1
-				demolitions_support = 1
+				#medical_chem_company = 1
+				#demolitions_support = 1
 				anti_tank_company = 1
 				anti_air_support = 1
-				recon_company = 1
+				#recon_company = 1
+				maintenance_company = 1
+				logistics_company = 1
 			}
 
 			regiments = {
@@ -94,11 +96,13 @@ special_forces_templates = {
 
 		allowed_types = {
 			spec_ops
-			medical_chem_company
+			#medical_chem_company
 			anti_tank_company
 			anti_air_support
-			demolitions_support
-			recon_company
+			#demolitions_support
+			#recon_company
+			maintenance_company
+			logistics_company
 		}
 	}
 }
@@ -184,28 +188,30 @@ power_armour_templates = {
 			match_value = 3000.0
 
 			support = {
-				medical_chem_company = 1
+				#medical_chem_company = 1
 				anti_air_support = 1
 				anti_tank_company = 1
 				logistics_company = 1
-				recon_company = 1
+				maintenance_company = 1
+				#recon_company = 1
 			}
 
 			regiments = {
-				power_armour = 6
-				power_armour_fireteam_infantry = 1
-				power_armour_demolitions_infantry = 1
+				power_armour = 8
+				#power_armour_fireteam_infantry = 1
+				#power_armour_demolitions_infantry = 1
 			}
 		}
 
 		allowed_types = {
 			power_armour
-			medical_chem_company
+			#medical_chem_company
 			anti_tank_company
 			logistics_company
-			recon_company
-			power_armour_demolitions_infantry
-			power_armour_fireteam_infantry
+			maintenance_company
+			#recon_company
+			#power_armour_demolitions_infantry
+			#power_armour_fireteam_infantry
 			anti_air_support
 		}
 	}

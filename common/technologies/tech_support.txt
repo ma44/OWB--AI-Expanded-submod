@@ -2702,18 +2702,11 @@ technologies = {
 
 		ai_will_do = {
 			factor = 4
+			#We always want to be ahead of time on anti tank so we don't get space marined
 
 			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
-			modifier = {
-				factor = 3
-				date > "2277.1.1"
-			}
-			modifier = {
-				factor = 3
-				date > "2278.1.1"
+				factor = 300000
+				date > "2275.1.1"
 			}
 		}
 	}
@@ -2749,19 +2742,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 4
+			#We always want to be ahead of time on anti tank so we don't get space marined
 
 			modifier = {
-				factor = 3
-				date > "2278.1.1"
-			}
-			modifier = {
-				factor = 3
-				date > "2279.1.1"
-			}
-			modifier = {
-				factor = 3
-				date > "2280.1.1"
+				factor = 300000
+				date > "2276.1.1"
 			}
 		}
 	}
@@ -2798,19 +2784,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			factor = 4
+			#We always want to be ahead of time on anti tank so we don't get space marined
 
 			modifier = {
-				factor = 3
-				date > "2281.1.1"
-			}
-			modifier = {
-				factor = 3
-				date > "2282.1.1"
-			}
-			modifier = {
-				factor = 3
-				date > "2283.1.1"
+				factor = 300000
+				date > "2278.1.1"
 			}
 		}
 	}
@@ -2848,19 +2827,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on anti tank so we don't get space marined
 
 			modifier = {
-				factor = 3
-				date > "2282.1.1"
-			}
-			modifier = {
-				factor = 3
-				date > "2283.1.1"
-			}
-			modifier = {
-				factor = 3
-				date > "2284.1.1"
+				factor = 300000
+				date > "2280.1.1"
 			}
 		}
 	}
@@ -2892,19 +2864,13 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 4
+			#We always want to be ahead of time on anti tank so we don't get space marined
+			#If we're scientific support, we definitely have enough research slots to put towards hard rushing this
 
 			modifier = {
-				factor = 3
-				date > "2283.1.1"
-			}
-			modifier = {
-				factor = 3
-				date > "2284.1.1"
-			}
-			modifier = {
-				factor = 3
-				date > "2285.1.1"
+				factor = 300000
+				date > "2280.1.1"
 			}
 		}
 	}
@@ -3645,7 +3611,8 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			#Get logistics and maint unlocked for our templates
+			factor = 1000000
 
 			modifier = {
 				factor = 3
@@ -3964,7 +3931,8 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			#Get logistics and maint unlocked for our templates
+			factor = 1000000
 
 			modifier = {
 				factor = 3
