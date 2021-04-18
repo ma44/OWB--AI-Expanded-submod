@@ -124,8 +124,8 @@ NDefines.NAI.MANPOWER_FREE_USAGE_THRESHOLD = 5000
 -- The AI will not deploy more units if he goes below this percentage
 NDefines.NAI.MANPOWER_RESERVED_THRESHOLD = 0.20
 
-NDefines.NAI.MAX_AVAILABLE_MANPOWER_RATIO_TO_BUFFER_WARTIME = 0.2			-- deployment will try to buffer a ratio of manpower (for reinforcements) during war time
-NDefines.NAI.MAX_AVAILABLE_MANPOWER_RATIO_TO_BUFFER_PEACETIME = 0.15		-- deployment will try to buffer a ratio of manpower (for reinforcements) during peace time
+NDefines.NAI.MAX_AVAILABLE_MANPOWER_RATIO_TO_BUFFER_WARTIME = 0.9			-- deployment will try to buffer a ratio of manpower (for reinforcements) during war time
+NDefines.NAI.MAX_AVAILABLE_MANPOWER_RATIO_TO_BUFFER_PEACETIME = 0.9		-- deployment will try to buffer a ratio of manpower (for reinforcements) during peace time
 -- ai will not start to train if equipment drops below this level
 NDefines.NAI.START_TRAINING_EQUIPMENT_LEVEL = 0.8
 

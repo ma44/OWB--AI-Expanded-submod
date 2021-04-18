@@ -343,52 +343,6 @@ stop_building_units_reserve_manpower_1000 = { # Please Stop Building Units
 	}
 }
 
-stop_building_units_reserve_manpower_2000 = { # Please Stop Building Units
-	enable = {
-		AND = {
-			has_manpower < 2000
-			num_divisions > 32
-			ai_wants_divisions > 32
-		}
-	}
-	abort = {
-		OR = {
-			has_manpower > 2000
-			num_divisions < 33
-			ai_wants_divisions < 33
-		}
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = -500
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = motorized
-		value = -500
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = mechanized
-		value = -500
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = armor
-		value = -500
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = support_robot
-		value = -500
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = combat_robot
-		value = -500
-	}
-}
 
 # Robots
 generic_boost_light_for_light_armor = {
@@ -620,11 +574,11 @@ addintelligence_agency_normal_upgrade_prio = {
 ask_foreign_manpower_as_major = {
 	enable = {
 		is_major = yes
-		garrison_manpower_need > 200000
+		garrison_manpower_need > 100
 	}
 
 	abort = {
-		garrison_manpower_need < 100000
+		garrison_manpower_need < 50
 	}
 
 	ai_strategy = {
@@ -666,6 +620,8 @@ put_garrisons_on_high_prio = {
 		value = 100 # positive is high prio, negative is low prio
 	}
 }
+
+
 
 #default_spyplanes_production = {
 #	enable = {
